@@ -1,125 +1,66 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-    v2.0 | 20110126
-    License: none (public domain)
-*/
+@import url(../reset.scss);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap');
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+$primary: #003049;
+$secondary: #EAE2B7;
+$warning: #FCBF49;
+
+/* 生馬路口圓體 */
+@font-face {
+    font-family: RawMarukoGothicCJKtc-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/maruko-gothic@1.001/webfont/raw/CJK%20TC/RawMarukoGothicCJKtc-Regular.woff2) format("woff2");
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+html {
+    font-size: 8px;
 }
+
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* My Css */
-:root{
-    --viridian: #5B8E7D;
-    --green: #8CB369;
-    --red: #BC4B51;
-    --orange: #F4A259;
-    --yellow: #F4E285;
-}
-
-/* 獅尾腿黑體 */
-@font-face {
-    font-family: SweiGothicLegCJKtc-Regular;
-    src: url(https://cdn.jsdelivr.net/gh/max32002/swei-gothic-leg@2.129/WebFont/CJK%20TC/SweiGothicLegCJKtc-Regular.woff2) format("woff2")
-    , url(https://cdn.jsdelivr.net/gh/max32002/swei-gothic-leg@2.129/WebFont/CJK%20TC/SweiGothicLegCJKtc-Regular.woff) format("woff");
-}
-
-/* 獅尾彎黑體 */
-@font-face {
-    font-family: SweiCurveSansCJKtc-Light;
-    src: url(https://cdn.jsdelivr.net/gh/max32002/swei-curve-sans@2.129/WebFont/CJK%20TC/SweiCurveSansCJKtc-Light.woff2) format("woff2")
-    , url(https://cdn.jsdelivr.net/gh/max32002/swei-curve-sans@2.129/WebFont/CJK%20TC/SweiCurveSansCJKtc-Light.woff) format("woff");
-}
-
-/* 何某手寫體 */
-@font-face {
-    font-family: nanifont;
-    src: url(https://cdn.jsdelivr.net/gh/max32002/nanifont@1.036/webfont/NaniFont-Regular.woff2) format("woff2")
-    , url(https://cdn.jsdelivr.net/gh/max32002/nanifont@1.036/webfont/NaniFont-Regular.woff) format("woff");
-}
-
-body{
-    font-family: SweiCurveSansCJKtc-Light;
+    font-family: 'Noto Sans TC', sans-serif;
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: $primary;
 }
 
-.container{
+.container {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.header{
-    background: var(--viridian);
+.header {
+    background: $primary;
     color: #fff;
 }
 
-h1{
-    font-size: 36px;
+h1 {
+    font-family: RawMarukoGothicCJKtc-Regular, sans;
+    font-size: 5rem;
 }
 
-h2{
-    font-size: 24px;
+h2 {
+    font-size: 3rem;
+    font-weight: 400;
 }
 
-.hw-list li{
+.list-1 li {
     margin-left: 1rem;
 }
 
-.hw-list a{
+.list-1 a {
     text-decoration: none;
-    color: var(--main-color);
-    background: linear-gradient(to bottom, #fff 60%, var(--yellow) 60%);
-
+    color: $primary;
+    background: linear-gradient(to bottom, #fff 60%, $secondary 60%);
 }
 
-.hw-list > li::before{
+.list-1 > li::before{
     content: "\25b6";
     margin-right: 5px;
-    font-size: .8em;
+    font-size: .8rem;
 }
 
 .list-2 > li::before{
     content: "\25c6";
     margin-right: 5px;
-    font-size: .8em;
+    font-size: .8rem;
 }

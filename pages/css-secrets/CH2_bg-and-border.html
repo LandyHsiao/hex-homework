@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH.2 Background & Border</title>
+    <link href="../../assets/css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/scss/pages/css-secrets.scss">
+</head>
+<body>
+    <div class="wrap-center">
+        <section class="unit unit-01">
+            <h2>Unit 01. 半透明邊框</h2>
+            <div class="showcase">
+                <div class="bg">
+                    <p class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum itaque, inventore ullam maxime quidem omnis?</p>
+                </div>
+            </div>
+            <div class="code html">
+                <script type="text/plain" class="language-html">
+                        <div class="bg">
+                            <p class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum itaque, inventore ullam maxime quidem omnis?</p>
+                        </div>
+                </script>
+            </div>
+            <div class="code css">
+                <script type="text/plain" class="language-css">
+                    .bg {
+                        background-image: url(../../image/css-secrets/christoffer-engstrom-wc9avd2RaN0-unsplash.jpg);
+                        width: 300px;
+                        height: 200px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                    p {
+                        width: 250px;
+                        padding: 1rem;
+                        margin: 0 auto;
+                        background-color: #fff;
+                        border: 2rem solid rgba(#fff, .5);
+                        background-clip: padding-box;
+                    }
+                </script>
+            </div>
+        </section>
+    </div>
+    <script src="../../scripts/prism.js"></script>
+</body>
+</html>
