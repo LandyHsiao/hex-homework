@@ -4,6 +4,8 @@
 * 任務
 * 上述過程中產生的study
 * 其他的study
+
+
 展示以上內容的[Github page](https://landyhsiao.github.io/hex-homework/)
 
 ## 用了啥
