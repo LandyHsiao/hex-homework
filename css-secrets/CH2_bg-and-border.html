@@ -7,25 +7,22 @@
     <!-- <link href="../../assets/scss/reset.scss" rel="stylesheet" /> -->
     
     
-  <script type="module" crossorigin src="/hex-homework/assets/css-secrets\\CH2_bg-and-border-c8a95edb.js"></script>
-  <link rel="stylesheet" href="/hex-homework/assets/CH2_bg-and-border-5f8da1c1.css">
+  <script type="module" crossorigin src="/hex-homework/assets/css-secrets\\CH2_bg-and-border-447a83bd.js"></script>
+  <link rel="stylesheet" href="/hex-homework/assets/CH2_bg-and-border-5146b0e5.css">
 </head>
 <body>
     <div class="wrap-center">
         <h1>CH.2 Background & Border</h1>
-        <section class="unit unit-01">
+        <section class="unit unit-01" id="u-01">
             <h2>Unit 01. 半透明邊框</h2>
+            <p class="description">運用<b>background-clip</b>特性讓背景不再延伸到border區塊，使得半透明邊框生效。</p>
             <div class="showcase">
                 <div class="bg">
-                    <p class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum itaque, inventore ullam maxime quidem omnis?</p>
+                    <div class="box border-box">bg is border-box (default)</div>
                 </div>
-            </div>
-            <div class="code html">
-                <script type="text/plain" class="language-html">
-                        <div class="bg">
-                            <p class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum itaque, inventore ullam maxime quidem omnis?</p>
-                        </div>
-                </script>
+                <div class="bg">
+                    <p class=" box padding-box">bg is padding-box</p>
+                </div>
             </div>
             <div class="code css">
                 <script type="text/plain" class="language-css">
@@ -33,14 +30,17 @@
                         background-image: url(../../image/css-secrets/christoffer-engstrom-wc9avd2RaN0-unsplash.jpg);
                     }
                     .box {
-                        background-color: #fff;
-                        border: 2rem solid rgba(#fff, .5);
+                        background-color: #60709c;
+                        border: 2rem dashed #fa75af;
+                    }
+                    .padding-box {
                         background-clip: padding-box;
+                        border: 2rem dashed rgba(#fa75af, .6);
                     }
                 </script>
             </div>
         </section>
-        <section class="unit unit-02">
+        <section class="unit unit-02" id="u-02">
             <h2>Unit 02. 多邊框</h2>
             <section class="box-shadow">
                 <h3>box-shadow solution</h3>
@@ -74,7 +74,7 @@
                 <div class="showcase">
                     <p class="sew">示範縫線效果</p>
                     <p class="no-sew">outline形狀看似已不是問題</p>
-                    <p class="no-sew offset">outline形狀還是有問題</p>
+                    <p class="no-sew offset">outline形狀還是有些問題</p>
                 </div>
                 <div class="code css">
                     <script type="text/plain" class="language-css">
