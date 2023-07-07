@@ -5,6 +5,9 @@ $primary: #003049;
 $secondary: #EAE2B7;
 $warning: #FCBF49;
 
+$list-mr: .8rem;
+$list-li-ml: 5rem;
+
 /* 生馬路口圓體 */
 @font-face {
     font-family: RawMarukoGothicCJKtc-Regular;
@@ -17,7 +20,7 @@ html {
 
 body {
     font-family: 'Noto Sans TC', sans-serif;
-    line-height: 1.5;
+    line-height: 2;
     font-size: 2.5rem;
     font-weight: 100;
     color: $primary;
@@ -44,7 +47,7 @@ h2 {
 }
 
 .list-1 li {
-    margin-left: 1rem;
+    margin-left: $list-li-ml;
 }
 
 .list-1 a {
@@ -55,12 +58,18 @@ h2 {
 
 .list-1 > li::before{
     content: "\25b6";
-    margin-right: 5px;
+    margin-right: $list-mr;
     font-size: .8rem;
 }
 
 .list-2 > li::before{
     content: "\25c6";
-    margin-right: 5px;
+    margin-right: $list-mr;
+    font-size: .8rem;
+}
+
+.list-3 > li::before{
+    content: "\25cf";
+    margin-right: $list-mr;
     font-size: .8rem;
 }
