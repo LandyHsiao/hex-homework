@@ -1,0 +1,195 @@
+@use './../common';
+@import url(../reset.scss);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
+
+
+/* colors */
+$primary: #3F5D45;
+$secondary: #EAF0ED;
+$info: #FFE180; 
+
+body {
+    color: $primary;
+    line-height: 1.375;
+    font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+a {
+    vertical-align: middle;
+}
+
+h1 {
+    @include common.h1-hidden;
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 40px;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+header {
+    padding-bottom: 60px;
+    nav {
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    ul.nav {
+        justify-content: space-between;
+        li {
+            margin-right: 60px;
+            &:last-child {
+                margin-left: 19px;
+                margin-right: 0;
+                img {
+                    width: 24px;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    margin-bottom: 60px;
+    aside {
+        margin-right: 20px;
+        ul.side-bar {
+            font-size: 24px;
+            text-align: center;
+            width: 300px;
+            li {
+                border: 1px solid $secondary;
+                a {
+                    padding : 15px 0;
+                    display: block;
+                    &:hover {
+                        background-color: $secondary;
+                    }
+                }
+                &:first-child {
+                    padding: 15px 0;
+                    color: $secondary;
+                    border-color: $primary;
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+    main {
+        ul.item-list {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            li {
+                position: relative;
+                margin-bottom: 20px;
+            }
+            img {
+                width: 300px;
+
+            }
+            .label {
+                text-orientation: upright;
+                position: absolute;
+                background-color: $primary;
+                color: $secondary;
+                width: 36px;
+                padding: 10px;
+                line-height: 1.25;
+                top: 0px;
+                left: 20px
+            }
+            .material-symbols-outlined {
+                position: absolute;
+                top: 19px;
+                right: 22px;
+            }
+            .info {
+                text-align: center;
+                p {
+                    border: 1px solid $secondary;
+                    border-top: none;
+                    font-size: 20px;
+                    padding: 14px 0;
+                    line-height: 1.4;
+                    border-bottom: none;
+                    &.name {
+                        width: 173px;
+                        font-weight: 300;
+                        border-right:  none;
+                    }
+                    &.price {
+                        width: 127px;
+                    }
+                }
+            }
+            .add-to-cart {
+                background-color: $secondary;
+                text-align: center;
+                font-size: 24px;
+                a {
+                    padding: 16px 0;
+                    display: block;
+                }
+            }
+        }
+        ul.pager {
+            justify-content: end;
+        }
+    }
+}
+
+footer {
+    .container {
+        max-width: 780px;
+        padding: 30px 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .subscribe {
+        background-color: $primary;
+        .description {
+            
+            img {
+                width: 40px;
+                margin-right: 20px; 
+            }
+            p {
+                color: $secondary;
+                font-size: 24px;
+            }
+        }
+    }
+    .email {
+        input[type=email] {
+            width: 316px;
+            height: 56px;
+            outline: none;
+            border: none;
+            border-radius: none;
+            font-size: 24px;
+            padding-left: 64px;
+        }
+        button {
+            width: 64px;
+            height: 56px;
+            border-radius: 0;
+            border: none;
+            outline: none;
+            background-color: $info;
+            color: $primary;
+        }
+    }
+}
