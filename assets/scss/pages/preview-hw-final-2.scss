@@ -1,8 +1,6 @@
 @use './../common';
 @import url(../reset.scss);
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap');
 /* colors */
 $primary: #3F5D45;
 $secondary: #EAF0ED;
@@ -36,6 +34,12 @@ h1 {
 
 .flex {
     display: flex;
+}
+
+.material-icons, .material-icons-outlined {
+    color: inherit;
+    font-size: inherit;
+    // vertical-align: ;
 }
 
 header {
@@ -98,7 +102,6 @@ header {
             }
             img {
                 width: 300px;
-
             }
             .label {
                 text-orientation: upright;
@@ -111,10 +114,14 @@ header {
                 top: 0px;
                 left: 20px
             }
-            .material-symbols-outlined {
+            .material-icons {
                 position: absolute;
                 top: 19px;
                 right: 22px;
+                &:hover {
+                    cursor: pointer;
+                    color: $info;
+                }
             }
             .info {
                 text-align: center;
@@ -139,6 +146,10 @@ header {
                 background-color: $secondary;
                 text-align: center;
                 font-size: 24px;
+                &:hover {
+                    background-color: $primary;
+                    color: $secondary;
+                }
                 a {
                     padding: 16px 0;
                     display: block;
@@ -147,6 +158,32 @@ header {
         }
         ul.pager {
             justify-content: end;
+            line-height: 1.4;
+            font-size: 20px;
+            text-align: center;
+            align-items: center;
+            li {
+                width: 60px;
+                height: 60px;
+                border: 1px solid $secondary;
+                border-right: none;
+                &:last-child {
+                    border-right: 1px solid $secondary;
+                }
+                &:hover {
+                    background-color: $primary;
+                    color: $secondary;
+                }
+                a {
+                    display: block;
+                    padding: 16px 0;
+                    vertical-align: top;
+                }
+                .material-icons {
+                    font-size: 24px;
+                    line-height: 1;
+                }
+            }
         }
     }
 }
@@ -181,6 +218,14 @@ footer {
             border-radius: none;
             font-size: 24px;
             padding-left: 64px;
+            &::before {
+                content: "test";
+                color: black;
+                width: 64px;
+                height: 56px;
+                font-size: 24px;
+                background-image: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/mail-24px.png?raw=true');
+            }
         }
         button {
             width: 64px;
@@ -190,6 +235,51 @@ footer {
             outline: none;
             background-color: $info;
             color: $primary;
+        }
+    }
+    .footer {
+        background-color: $secondary;
+        img {
+            &.logo {
+                width: 171px;
+                margin: 9px 0 115.5px 0;
+                
+            }
+            &.icon {
+                width: 32px;
+                margin-right: 8px;
+            }
+        }
+        .contact {
+            line-height: 1.4;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        .slogans {
+            margin-bottom: 46px;
+            justify-content: end;
+        }
+        .slogan {
+            // text-align: center;
+            // vertical-align: middle;
+            text-orientation: mixed;
+            writing-mode: vertical-rl;
+            width: 30px;
+            height: 219px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            font-weight: 900;
+            font-size: 22px;
+            letter-spacing: .1em;
+            &:first-child {
+                padding-top: 10px;
+            }
+        }
+        .copyright {
+            font-weight: 400;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Noto Serif TC', serif;
+            line-height: 1;
         }
     }
 }

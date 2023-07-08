@@ -6,7 +6,7 @@
     <title>Sweetaste</title>
     <link rel="stylesheet" href="../assets/scss/pages/preview-hw-final-2.scss">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
 </head>
 <body>
     <header class="container">
@@ -36,7 +36,7 @@
                 <li>
                     <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-1.png?raw=true" alt="sweets">
                     <div class="label">本日精選</div>
-                    <span class="material-symbols-outlined">favorite</span>
+                    <span class="material-icons un-fav">favorite_border</span>
                     <div class="flex info">
                         <p class="name">焦糖馬卡龍</p>
                         <p class="price">NT$ 450</p>
@@ -48,7 +48,7 @@
                 <li>
                     <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-2.png?raw=true" alt="sweets">
                     <div class="label">本日精選</div>
-                    <span class="material-symbols-outlined">favorite</span>
+                    <span class="material-icons un-fav">favorite_border</span>
                     <div class="flex info">
                         <p class="name">焦糖馬卡龍</p>
                         <p class="price">NT$ 450</p>
@@ -60,7 +60,7 @@
                 <li>
                     <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-3.png?raw=true" alt="sweets">
                     <div class="label">本日精選</div>
-                    <span class="material-symbols-outlined">favorite</span>
+                    <span class="material-icons un-fav">favorite_border</span>
                     <div class="flex info">
                         <p class="name">焦糖馬卡龍</p>
                         <p class="price">NT$ 450</p>
@@ -72,7 +72,7 @@
                 <li>
                     <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-4.png?raw=true" alt="sweets">
                     <div class="label">本日精選</div>
-                    <span class="material-symbols-outlined">favorite</span>
+                    <span class="material-icons un-fav">favorite_border</span>
                     <div class="flex info">
                         <p class="name">焦糖馬卡龍</p>
                         <p class="price">NT$ 450</p>
@@ -84,7 +84,7 @@
                 <li>
                     <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-5.png?raw=true" alt="sweets">
                     <div class="label">本日精選</div>
-                    <span class="material-symbols-outlined">favorite</span>
+                    <span class="material-icons un-fav">favorite_border</span>
                     <div class="flex info">
                         <p class="name">焦糖馬卡龍</p>
                         <p class="price">NT$ 450</p>
@@ -96,7 +96,7 @@
                 <li>
                     <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-6.png?raw=true" alt="sweets">
                     <div class="label">本日精選</div>
-                    <span class="material-symbols-outlined">favorite</span>
+                    <span class="material-icons un-fav">favorite_border</span>
                     <div class="flex info">
                         <p class="name">焦糖馬卡龍</p>
                         <p class="price">NT$ 450</p>
@@ -108,11 +108,11 @@
                 
             </ul>
             <ul class="pager flex">
-                <li><a href="#"><span class="material-symbols-outlined">arrow_left</span></a></li>
+                <li><a href="#"><span class="material-icons">arrow_left</span></a></li>
                 <li><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
-                <li><a href="#"><span class="material-symbols-outlined">arrow_right</span></a></li>
+                <li><a href="#"><span class="material-icons">arrow_right</span></a></li>
             </ul>
         </main>
     </div>
@@ -124,16 +124,36 @@
                     <p>訂閱你我的甜蜜郵件</p>
                 </div>
                 <div class="flex email">
-                    <input type="email" name="" id="">
+                    <input class="material-icons" type="email" name="" id="">
                     <button>
-                        <span class="material-symbols-outlined">arrow_forward</span>
+                        <span class="material-icons">arrow_forward</span>
                     </button>
                 </div>
             </div>
         </div>
         <div class="footer">
-            <div class="container">
-
+            <div class="container flex">
+                <div class="info">
+                    <img class="logo" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-lg-dark.svg" alt="logo">
+                    <ul class="contact">
+                        <li>07-1234-5678</li>
+                        <li>sweetaste@email.com</li>
+                        <li>800 高雄市新興區幸福路 520 號</li>
+                    </ul>
+                    <div class="social-icon flex">
+                        <a href="#" class="icon"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/ic-line%40.svg" alt="line logo" class="icon"></a>
+                        <a href="#" class="icon"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/ic-facebook.svg" alt="fb logo" class="icon"></a>
+                        
+                    </div>
+                </div>
+                <div class="other">
+                    <div class="slogans flex">
+                        <p class="slogan">吃甜點的好日子。</p>
+                        <p class="slogan">今天是個——</p>
+                        
+                    </div>
+                    <p class="copyright">© 2018 Sweetaste* All Rights Reserved</p>
+                </div>
             </div>
         </div>
     </footer>
