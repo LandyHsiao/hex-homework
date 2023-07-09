@@ -61,6 +61,10 @@ header {
                     width: 24px;
                 }
             }
+            &:hover {
+                // background-color: $info;
+                background: linear-gradient(to bottom, #fff 60%, $info 60%);
+            }
         }
     }
 }
@@ -177,7 +181,7 @@ header {
                 a {
                     display: block;
                     padding: 16px 0;
-                    vertical-align: top;
+                    // vertical-align: top;
                 }
                 .material-icons {
                     font-size: 24px;
@@ -210,6 +214,15 @@ footer {
         }
     }
     .email {
+        position: relative;
+        &::before {
+            position: absolute;
+            font-family: 'Material Icons';
+            content: "\e0be";
+            font-size: 24px;
+            left: 20px;
+            top: 12px;
+        }
         input[type=email] {
             width: 316px;
             height: 56px;
@@ -218,23 +231,22 @@ footer {
             border-radius: none;
             font-size: 24px;
             padding-left: 64px;
-            &::before {
-                content: "test";
-                color: black;
-                width: 64px;
-                height: 56px;
-                font-size: 24px;
-                background-image: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/mail-24px.png?raw=true');
-            }
+            color: $primary;
         }
         button {
             width: 64px;
             height: 56px;
             border-radius: 0;
             border: none;
-            outline: none;
             background-color: $info;
             color: $primary;
+            & span:hover {
+                cursor: pointer;
+                font-size: 32px;
+            }
+            & span:active {
+                font-size: 18px;
+            }
         }
     }
     .footer {
