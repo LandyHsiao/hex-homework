@@ -42,6 +42,8 @@
             <h2>Unit 02. 多邊框</h2>
             <section class="box-shadow">
                 <h3>box-shadow solution</h3>
+                <p class="description">利用可以有多個<b>box-shadow</b>的特性仿造多個border，但須注意box-shadow不在border-box的範圍內（觀察hover效果出現的範圍）。
+                須以<b>inset</b>語法讓box-shadow出現在border-box範圍內，但此時須自行計算所需的box寬高</p>
                 <div class="showcase">
                     <p class="box-shadow-1">box-shadow模擬border</p>
                     <p class="box-shadow-2">box-shadow模擬2層border</p>
@@ -50,6 +52,9 @@
                 </div>
                 <div class="code css">
                     <script type="text/plain" class="language-css">
+                        p:hover {
+                            cursor: pointer;
+                        }
                         p.box-shadow-1 {
                             box-shadow: 0 0 0 2rem #60709c;
                         }
@@ -69,6 +74,7 @@
             </section>
             <section class="outline">
                 <h3>outline solution</h3>
+                <p class="description">大致上與box-shadow相同，但<b>只能有一個outline</b>，另外沒有inset的語法，要用<b>outline-offset</b>把outline往內推到元素中。另須注意在啟用border-radius時outline形狀有可能不是預期的圓角。</p>
                 <div class="showcase">
                     <p class="sew">示範縫線效果</p>
                     <p class="no-sew">outline形狀看似已不是問題</p>
@@ -79,12 +85,15 @@
                         p {
                             border-radius: 1rem;
                         }
+                        p:hover {
+                            cursor: pointer;
+                        }
                         p.sew {
                             outline: 1rem dashed #fff;
                             outline-offset: -1.5rem;
                         }
                         p.no-sew {
-                            utline: 1rem solid $warning;
+                            outline: 1rem solid $warning;
                         }
                         p.no-sew.offset {
                             utline: 1rem solid $warning;
@@ -93,6 +102,53 @@
                     </script>
                 </div>
             </section>
+        </section>
+        <section class="unit unit-03">
+            <h2>Unit 03. 彈性背景定位</h2>
+            <p class="description"><b>利用background-position</b>移動背景圖片位置、<b>background-origin</b>設定背景的範圍</p>
+            <div class="showcase">
+                <div class="bg">default</div>
+                <div class="bg position-br">use bg-position: bottom right</div>
+                <div class="bg position-br-offset">bg-position with 10px offset</div>
+                <div class="bg origin">bg-position with offset<br>&<br>bg-origin: content-box</div>
+                <div class="bg calc">calc() function in offset</div>
+                <div class="bg show-padding">show where's padding with default bg-image</div>
+            </div>
+            <div class="code css">
+                <script type="text/plain" class="language-css">
+                    .bg {
+                        padding: 10px;
+                        width: 300px;
+                        height: 200px;
+                        background: url('../../image/css-secrets/food_soup_okuzukake.png') no-repeat #60709c;
+                    }
+                    .position-br {
+                        background-position: bottom right;
+                    }
+                    .position-br-offset {
+                        background-position: bottom 10px right 10px;
+                    }
+                    .origin {
+                        background-origin: content-box;
+                        background-position: bottom right;
+                    }
+                    .calc {
+                        background-position: calc(100% - 10px) calc(100% - 10px);
+                    }
+                    .show-padding {
+                        background-clip: content-box;
+                        border: 3px solid #fa75af;
+                    }
+                </script>
+            </div>
+        </section>
+        <section class="unit unit-04">
+            <h2>Unit 04. 內圓角</h2>
+            <p class="description"></p>
+            <div class="showcase">
+                <div class="two-box box-outside"><div class="box-inside">最直覺的兩層元素作法</div></div>
+                <div class="outline">outline特性</div>
+            </div>
         </section>
     </div>
     <script type="module" src="../../scripts/prism.js"></script>
