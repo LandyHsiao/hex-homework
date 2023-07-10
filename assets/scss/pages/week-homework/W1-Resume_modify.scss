@@ -1,0 +1,125 @@
+@import url(../../reset.scss);
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap');
+
+$gray-bg: #EFEFEF;
+$gray-label: #949494;
+$red: #AE0000;
+
+body {
+    line-height: 1.5;
+    font-family: 'Castoro', serif;
+}
+
+.container {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+/*
+// no flex using
+.flex {
+    display: flex;
+}
+*/
+
+.banner {
+    h1, h2 {
+        font-size: 128px;
+        letter-spacing: .12em;
+    }
+    h2 {
+        text-align: end;
+    }
+    img.portrait {
+        width: 636px;
+        display: block;
+        margin: 0 auto;
+    }
+    &.container {
+        padding-top: 160px;
+    }
+}
+
+.intro {
+    background-color: $gray-bg;
+    .container {
+        padding: 48px 0;
+    }
+    p {
+        width: 636px;
+        margin-left: auto;
+        font-size: 32px;
+    }
+}
+
+.detail {
+    padding: 80px 0 160px 0;
+    ul.list {
+        width: 636px;
+    }
+    a {
+        color: #000;
+    }
+    h3 {
+        color: $red;
+        font-size: 40px;
+        border-bottom: 3px solid $red;
+        margin-bottom: 16px;
+    }
+    ul.list>li {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+    ul.label-list {
+        li {
+            margin-bottom: 16px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        p.label {
+            margin-bottom: 0;
+            color: $gray-label;
+            font-size: 20px;
+            font-style: italic;
+        }
+    }
+    ul.normal-list li {
+        margin-bottom: 8px;
+    }
+}
+
+/*
+// no flex using
+.footer {
+    background-color: #000;
+    justify-content: center;
+    padding: 64px 0;
+    a.social-icon {
+        width: 64px;
+        margin-right: 40px;
+        &:last-child {
+            margin-left: 0;
+        }
+    }
+}
+*/
+
+.footer {
+    background-color: #000;
+    padding: 64px 0;
+    .wrap {
+        margin: 0 auto;
+        width: fit-content;
+    }
+    a.social-icon {
+        width: 64px;
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0;
+        }
+        img {
+            width: 64px;
+        }
+    }
+}
