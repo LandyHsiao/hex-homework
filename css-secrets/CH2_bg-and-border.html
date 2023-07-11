@@ -7,8 +7,8 @@
     <!-- <link href="../../assets/scss/reset.scss" rel="stylesheet" /> -->
     
     
-  <script type="module" crossorigin src="/hex-homework/assets/css-secrets\\CH2_bg-and-border-35d68179.js"></script>
-  <link rel="stylesheet" href="/hex-homework/assets/CH2_bg-and-border-b5368482.css">
+  <script type="module" crossorigin src="/hex-homework/assets/css-secrets\\CH2_bg-and-border-8bae3010.js"></script>
+  <link rel="stylesheet" href="/hex-homework/assets/CH2_bg-and-border-618bc0a8.css">
 </head>
 <body>
     <div class="wrap-center">
@@ -95,10 +95,10 @@
                             outline-offset: -1.5rem;
                         }
                         p.no-sew {
-                            outline: 1rem solid $warning;
+                            outline: 1rem solid #fa75af;
                         }
                         p.no-sew.offset {
-                            utline: 1rem solid $warning;
+                            utline: 1rem solid #fa75af;
                             outline-offset: -2rem;
                         }
                     </script>
@@ -146,10 +146,99 @@
         </section>
         <section class="unit unit-04">
             <h2>Unit 04. 內圓角</h2>
-            <p class="description"></p>
+            <p class="description">當年的border-radius不會使outline受影響，因此outline技巧已失效囉</p>
             <div class="showcase">
                 <div class="two-box box-outside"><div class="box-inside">最直覺的兩層元素作法</div></div>
-                <div class="outline">outline特性</div>
+                <div class="outline">outline hack失效啦</div>
+            </div>
+            <div class="code css">
+                <script type="text/plain" class="language-css">
+                    .box-outside {
+                        background-color: #60709c;
+                        color: #fff;
+                        width: 300px;
+                        height: 200px;
+                        padding: 25px;
+                    }
+                    .box-inside {
+                        width: 250px;
+                        height: 150px;
+                        margin: 0 auto;
+                        background-color: #003049;
+                        border-radius: 1rem;
+                    }
+                    .outline {
+                        background-color: #003049;
+                        width: 250px;
+                        height: 150px;
+                        color: #fff;
+                        border-radius: 1rem;
+                        outline: 25px solid #60709c;
+                    }
+                </script>
+            </div>
+        </section>
+        <section class="unit unit-05">
+            <h2>Unit 05. 條紋背景</h2>
+            <p class="description">利用<b>linear-gradient</b>的中斷點製做條紋，<b>repeating-linear-gradient</b>可以更輕鬆的製作條紋</p>
+            <div class="showcase">
+                <div class="gradient">linear-gradient基本用法</div>
+                <div class="stripe">用linear-gradient製作條紋</div>
+                <div class="stripe-repeat">用linear-gradient製作重複的條紋</div>
+                <div class="stripe-triple">用linear-gradient製作三種顏色且寬度不一的條紋</div>
+                <div class="vertical">直條紋</div>
+            </div>
+            <div class="code css">
+                <script type="text/plain" class="language-css">
+                    .gradient {
+                        background: linear-gradient(#003049, #60709c);
+                    }
+                    .stripe {
+                        background: linear-gradient(#003049 50%, #60709c 50%);
+                    }
+                    .stripe-repeat {
+                        background: linear-gradient(#003049 50%, #60709c 50%);
+                        background-size: 100% 20%;
+                    }
+                    .stripe-triple {
+                        background: linear-gradient(#003049 25%, #60709c 0, #60709c 85%, #fa75af 0);
+                        background-size: 100% 20%;
+                    }
+                    .vertical {
+                        background: linear-gradient(to right, #003049 25%, #60709c 0, #60709c 85%, #fa75af 0);
+                        background-size: 15% 100%;
+                    }
+                </script>
+            </div>
+            <div class="showcase">
+                <div class="twill-try">失敗的斜紋嘗試</div>
+                <div class="twill-normal">正常的斜線出現了</div>
+                <div class="twill-good">寬度符合預期的斜線出現了</div>
+                <div class="twill-better">可輕易改變角度的更好的寫法：repeating-linear-gradient</div>
+                <div class="twill-complex">綜合兩者的應用</div>
+            </div>
+            <div class="code css">
+                <script type="text/plain" class="language-css">
+                    .twill-try {
+                        background: linear-gradient(45deg, #003049 50%, #60709c 50%);
+                        background-size: 25px 25px;
+                    }
+                    .twill-normal {
+                        background: linear-gradient(45deg, #003049 25%, #60709c 0, #60709c 50%, #003049 0, #003049 75%, #60709c 0);
+                        background-size: 40px 40px;
+                    }
+                    .twill-good {
+                        background: linear-gradient(45deg, #003049 25%, #60709c 0, #60709c 50%, #003049 0, #003049 75%, #60709c 0);
+                        background-size: 56.568px 56.568px;
+                    }
+                    .twill-better {
+                        background: repeating-linear-gradient(65deg, #003049, #003049 20px, #60709c 0, #60709c 40px);
+                    }
+                    .twill-complex {
+                        background: repeating-linear-gradient(45deg, #003049 0, #003049 25%, #60709c 0, #60709c 50%);
+                        background-size: 56.568px 56.568px;
+                    }
+                </script>
             </div>
         </section>
     </div>
