@@ -1,0 +1,257 @@
+@import url(../../reset.scss);
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+@mixin button($bg: #fff, $color: #000, $arrow_addr: 'https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/arrow_outward.png?raw=true') {
+    position: relative;
+    margin-right: 28px;
+    width: 185px;
+    height: 48px;
+    padding: 12px 24px;
+    text-align: center;
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    background-color: $bg;
+    color: $color;
+    font-size: 16px;
+    font-family: 'Bruno Ace SC', cursive;
+    &:hover, &:active {
+    cursor: pointer;
+    }
+    span {
+    position: relative;
+    margin-right: 28px;
+    display: inline-block;
+    }
+    span:after {
+    position: absolute;
+    top: -2px;
+    right: -28px;
+    content:'';
+    background-image: url($arrow_addr);
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    }
+}
+
+$primary: #00FFA3;
+$c-black: #15161D;
+$c-white: #D1D1D1;
+
+body {
+    line-height: 1.5;
+    outline: 1px solid red;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1296px;
+}
+
+.fz-24 {
+    font-size: 24px;
+}
+.ptb-160 {
+    padding: 160px 0;
+}
+.ptb-96 {
+    padding: 96px 0;
+}
+.mtb-160 {
+    margin: 160px 0;
+}
+.pbt-72 {
+    padding: 72px 0;
+}
+.mb-36 {
+    margin-bottom: 36px;
+}
+.mb-32 {
+    margin-bottom: 32px;
+}
+.mr-134 {
+    margin-right: 134px;
+}
+.mb-4 {
+    margin-bottom: 4px;
+}
+.mr-113 {
+    margin-right: 113px;
+}
+.mr-16 {
+    margin-right: 16px;
+}
+.mb-16 {
+    margin-bottom: 16px;
+}
+.mb-28 {
+    margin-bottom: 28px;
+}
+.mr-24 {
+    margin-right: 24px;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+}
+
+h1 {
+    color: $primary;
+    font-size: 128px;
+}
+
+h2 {
+    font-size: 64px;
+}
+
+h3, p.number {
+    font-size: 20px;
+}
+
+header {
+    padding-top: 40px;
+    .container {
+        justify-content: space-between;
+    }
+    .nav {
+        justify-content: space-evenly;
+        li {
+            max-width: 306px;
+            min-width: 196px;
+            &:last-child {
+                text-align: end;
+            }
+        }
+    }
+    .banner {
+        img {
+            width: 636px;
+        }
+        .text {
+            width: 636px;
+        }
+        button {
+            display: block;
+            margin-left: auto;
+            @include button($arrow_addr: '../../../image/week2/arrow_outward.png');
+        }
+    }
+}
+
+.intro {
+    background-image: url('../../../image/week2/background-img.png');
+    background-size: cover;
+    color: #fff;
+    .container {
+        justify-content: space-between;
+    }
+    img {
+        width: 196px;
+    }
+    .text {
+        width: 526px;
+        img {
+            width: 32px;
+            margin-right: 16px;
+        }
+    }
+}
+
+.about {
+    ul.trait {
+        width: 636px;
+        flex-wrap: wrap;
+        gap: 24px;
+        li {
+            width: 306px;
+            border: 1px solid #E3E3E3;
+            padding: 16px;
+        }
+    }
+    .text {
+        width: 526px;
+    }
+}
+
+.contact {
+    background: linear-gradient(#050014, #01021E);
+    h2 {
+        color: #fff;
+        height: 96px;
+    }
+    .text {
+        align-items: center;
+        img {
+            width: 100px;
+        }
+    }
+    .icons {
+        a:hover {
+            filter: drop-shadow(0 0 5px 10px #fff);
+        }
+        img {
+            width: 162px;
+            
+        }
+    }
+    
+}
+
+.projects {
+    h2 {
+        margin-left: 550px;
+    }
+    button {
+        @include button($bg:#000, $color: #fff, $arrow_addr: '../../../image/week2/arrow_outward-white.png');
+        display: block;
+        margin-left: auto;
+    }
+    .top, .bottom {
+        justify-content: space-between;
+    }
+    a {
+        display: block;
+    }
+    img {
+        display: block;
+    }
+    .left {
+        img {
+            width: 416px;
+        }
+    }
+    .right {
+        .top {
+            p {
+                margin-bottom: 76px;
+            }
+            img {
+                width: 196px;
+            }
+            .text {
+                width: 636px;
+            }
+        }
+        .bottom {
+            img {
+                height: 306px;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 40px 0;
+    background-color: #000;
+    color: #fff;
+    .copyright {
+        text-align: center;
+    }
+}
