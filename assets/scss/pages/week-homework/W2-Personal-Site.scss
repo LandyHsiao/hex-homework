@@ -15,34 +15,40 @@
     color: $color;
     font-size: 16px;
     font-family: 'Bruno Ace SC', cursive;
+    display: block;
+    margin-left: auto;
     &:hover, &:active {
-    cursor: pointer;
+        cursor: pointer;
+        outline: 2px $color solid;
+        outline-offset: -5px;
     }
     span {
-    position: relative;
-    margin-right: 28px;
-    display: inline-block;
+        position: relative;
+        margin-right: 28px;
+        display: inline-block;
     }
     span:after {
-    position: absolute;
-    top: -2px;
-    right: -28px;
-    content:'';
-    background-image: url($arrow_addr);
-    background-size: cover;
-    width: 24px;
-    height: 24px;
+        position: absolute;
+        top: -2px;
+        right: -28px;
+        content:'';
+        background-image: url($arrow_addr);
+        background-size: cover;
+        width: 24px;
+        height: 24px;
     }
 }
 
 $primary: #00FFA3;
 $c-black: #15161D;
 $c-white: #D1D1D1;
+$hover-effect: #9094FF;
+$border-gray: #E3E3E3;
 
 body {
     line-height: 1.5;
-    outline: 1px solid red;
     font-family: 'Bruno Ace SC', cursive;
+    color: $c-black;
 }
 
 .flex {
@@ -54,38 +60,35 @@ body {
     max-width: 1296px;
 }
 
+.bg-black {
+    background-color: #000;
+}
+.t-white {
+    color: #fff;
+}
 .fz-24 {
     font-size: 24px;
 }
-.ptb-160 {
-    padding: 160px 0;
+.p-16 {
+    padding: 16px;
+}
+.pt-40 {
+    padding-top: 40px;
+}
+.ptb-40 {
+    padding: 40px 0;
+}
+.ptb-72 {
+    padding: 72px 0;
 }
 .ptb-96 {
     padding: 96px 0;
 }
-.mtb-160 {
-    margin: 160px 0;
-}
-.pbt-72 {
-    padding: 72px 0;
-}
-.mb-36 {
-    margin-bottom: 36px;
-}
-.mb-32 {
-    margin-bottom: 32px;
-}
-.mr-134 {
-    margin-right: 134px;
+.ptb-160 {
+    padding: 160px 0;
 }
 .mb-4 {
     margin-bottom: 4px;
-}
-.mr-113 {
-    margin-right: 113px;
-}
-.mr-16 {
-    margin-right: 16px;
 }
 .mb-16 {
     margin-bottom: 16px;
@@ -93,13 +96,29 @@ body {
 .mb-28 {
     margin-bottom: 28px;
 }
+.mb-32 {
+    margin-bottom: 32px;
+}
+.mb-36 {
+    margin-bottom: 36px;
+}
+.mb-76 {
+    margin-bottom: 76px;
+}
+.mr-16 {
+    margin-right: 16px;
+}
 .mr-24 {
     margin-right: 24px;
 }
-
-header {
-    background-color: #000;
-    color: #fff;
+.mr-113 {
+    margin-right: 113px;
+}
+.mr-134 {
+    margin-right: 134px;
+}
+.mtb-160 {
+    margin: 160px 0;
 }
 
 h1 {
@@ -116,17 +135,20 @@ h3, p.number {
 }
 
 header {
-    padding-top: 40px;
     .container {
         justify-content: space-between;
     }
     .nav {
-        justify-content: space-evenly;
+        justify-content: space-between;
+        color: $c-white;
         li {
             max-width: 306px;
             min-width: 196px;
             &:last-child {
                 text-align: end;
+            }
+            &:hover {
+                color: #fff;
             }
         }
     }
@@ -138,8 +160,6 @@ header {
             width: 636px;
         }
         button {
-            display: block;
-            margin-left: auto;
             @include button($arrow_addr: '../../../image/week2/arrow_outward.png');
         }
     }
@@ -148,7 +168,6 @@ header {
 .intro {
     background-image: url('../../../image/week2/background-img.png');
     background-size: cover;
-    color: #fff;
     .container {
         justify-content: space-between;
     }
@@ -159,20 +178,20 @@ header {
         width: 526px;
         img {
             width: 32px;
-            margin-right: 16px;
         }
     }
 }
 
 .about {
+    align-items: center;
     ul.trait {
         width: 636px;
         flex-wrap: wrap;
         gap: 24px;
         li {
             width: 306px;
-            border: 1px solid #E3E3E3;
-            padding: 16px;
+            border: 1px solid $border-gray;
+            box-shadow: 4px 4px 4px 0px rgba(171, 171, 171, .1);
         }
     }
     .text {
@@ -181,11 +200,7 @@ header {
 }
 
 .contact {
-    background: linear-gradient(#050014, #01021E);
-    h2 {
-        color: #fff;
-        height: 96px;
-    }
+    background: linear-gradient(to bottom, #050014, rgba(#01021E, .89));
     .text {
         align-items: center;
         img {
@@ -194,7 +209,7 @@ header {
     }
     .icons {
         a:hover {
-            filter: drop-shadow(0 0 10px #906bff);
+            filter: drop-shadow(0 0 10px $hover-effect);
         }
         img {
             width: 162px;
@@ -210,29 +225,25 @@ header {
     }
     button {
         @include button($bg:#000, $color: #fff, $arrow_addr: '../../../image/week2/arrow_outward-white.png');
-        display: block;
-        margin-left: auto;
+    }
+    img:hover {
+        transform: scale(1.2);
+        transition: transform .5s ease;
+    }
+    a.overflow-hidden {
+        overflow: hidden;
     }
     .top, .bottom {
         justify-content: space-between;
     }
-    a {
-        display: block;
-    }
-    img {
-        display: block;
-    }
     .left {
-        img {
+        a {
             width: 416px;
         }
     }
     .right {
         .top {
-            p {
-                margin-bottom: 76px;
-            }
-            img {
+            a {
                 width: 196px;
             }
             .text {
@@ -240,7 +251,7 @@ header {
             }
         }
         .bottom {
-            img {
+            a {
                 height: 306px;
             }
         }
@@ -248,9 +259,6 @@ header {
 }
 
 footer {
-    padding: 40px 0;
-    background-color: #000;
-    color: #fff;
     .copyright {
         text-align: center;
     }
