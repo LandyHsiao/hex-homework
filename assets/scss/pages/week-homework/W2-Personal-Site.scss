@@ -16,7 +16,7 @@
     font-size: 16px;
     font-family: 'Bruno Ace SC', cursive;
     display: block;
-    margin-left: auto;
+    margin-right: 0;
     &:hover, &:active {
         cursor: pointer;
         outline: 2px $color solid;
@@ -124,6 +124,7 @@ body {
 h1 {
     color: $primary;
     font-size: 128px;
+    text-align: end;
 }
 
 h2 {
@@ -160,7 +161,8 @@ header {
             width: 636px;
         }
         button {
-            @include button($arrow_addr: '../../../image/week2/arrow_outward.png');
+            @include button($arrow_addr: '../../../image/week2/arrow_outward.png');    
+            margin-left: auto;
         }
     }
 }
@@ -208,12 +210,12 @@ header {
         }
     }
     .icons {
+        margin-left: auto;
         a:hover {
             filter: drop-shadow(0 0 10px $hover-effect);
         }
         img {
             width: 162px;
-            
         }
     }
     
