@@ -1,0 +1,241 @@
+@import url(../../reset.scss);
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+@mixin button($bg, $color, $addr) {
+    position: relative;
+    width: 185px;
+    height: 48px;
+    padding: 12px 24px;
+    text-align: center;
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    background-color: $bg;
+    color: $color;
+    font-size: 16px;
+    display: block;
+    font-family: Bruno Ace SC, serif;
+    &:hover {
+        outline: 2px solid $color;
+        outline-offset: -5px;
+    }
+    span {
+        position: relative;
+        margin-right: 28px;
+        display: inline-block;
+        &:after {
+            position: absolute;
+            top:-2px;
+            right: -28px;
+            content: '';
+            background-image: url($addr);
+            background-size: cover;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+$primary: #00FFA3;
+$c-black: #15161D;
+$c-white: #D1D1D1;
+$hover-effect: #9094FF;
+$border-gray: #E3E3E3;
+$gradient-1: #050014;
+$gradient-2: #01021E;
+$card-shadow: #ababab;
+
+body {
+    line-height: 1.5;
+    font-family: Bruno Ace SC, serif;
+    color: $c-black;
+}
+
+h1 {
+    font-size: 128px;
+    text-align: end;
+    color: $primary;
+}
+
+h2 {
+    font-size: 64px;
+}
+
+h3, p.number {
+    font-size: 20px;
+}
+
+.container {
+    width: 1296px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.t-white {
+    color: #fff;
+}
+
+.fz-24 {
+    font-size: 24px;
+}
+
+.py-160 {
+    padding: 160px 0;
+}
+
+.mb-4 {
+    margin-bottom: 4px;
+}
+
+.mr-24 {
+    margin-right: 24px;
+}
+.mr-113 {
+    margin-right: 13px;
+}
+
+.mb-28{
+    margin-bottom: 28px;
+}
+
+.nav {
+    padding-top: 40px;
+    justify-content: space-between;
+    color: $c-white;
+    li {
+        max-width: 306px;
+        min-width: 196px;
+        &:hover {
+            color: #fff;
+        }
+        &:last-child {
+            text-align: end;
+        }
+    }
+}
+
+.banner {
+    padding: 72px 0;
+    align-items: center;
+    img {
+        width: 636px;
+    }
+    .text {
+        width: 636px;
+    }
+    button {
+        @include button($color: #000, $bg: #fff, $addr:'../../../image/week2/arrow_outward.png');
+        margin-left: auto;
+    }
+}
+
+.intro {
+    background-image: url('../../../image/week2/background-img.png');
+    background-size: cover;
+    h2 {
+        margin-bottom: 36px;
+    }
+    .container {
+        justify-content: space-between;
+    }
+    img {
+        height: 600px;
+    }
+    .text {
+        
+        p {
+            margin-bottom: 32px;
+        }
+        img {
+            width: 32px;
+            height: auto;
+            margin-right: 16px;
+        }
+    }
+
+}
+
+.about {
+    align-items: center;
+    ul.trait {
+        flex-wrap: wrap;
+        gap: 24px;
+        width: 636px;
+        margin-right: 134px;
+        li {
+            padding: 16px;
+            width: 306px;
+            border: 1px solid $border-gray;
+            box-shadow: (4px 4px 4px 0 rgba($card-shadow, .1));
+        }
+    }
+    .text {
+        width: 526px;
+        h2 {
+            margin-bottom: 36px;
+        }
+    }
+}
+
+.contact {
+    padding: 96px 0;
+    background: linear-gradient(to bottom, $gradient-1, rgba($gradient-2, .89));
+    // .container {
+    //     justify-content: space-between;
+    // }
+    .text {
+        align-items: center;
+        h2 {
+            margin-right: 16px;
+        }
+        img {
+            width: 100px;
+        }
+    }
+    .icons {
+        margin-left: auto;
+        img {
+            width: 162px;
+            &:hover {
+                filter: drop-shadow(0 0 10px $hover-effect);
+            }
+        }
+
+    }
+}
+
+.projects {
+    h2 {
+        margin-left: 550px;
+    }
+    .left {
+        img {
+            width: 416px;
+        }
+    }
+    .right {
+        .top {
+            img {
+                width: 196px;
+            }
+            button {
+                @include button ($bg:#000, $color:#fff, $addr:'../../../image/week2/arrow_outward-white.png')
+            }
+            p {
+                margin-bottom: 76px;
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+}

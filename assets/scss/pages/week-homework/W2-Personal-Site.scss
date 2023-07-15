@@ -173,8 +173,19 @@ header {
     .container {
         justify-content: space-between;
     }
-    img {
+    .img {
         width: 196px;
+        height: 600px;
+        &.sparkle {
+            background-image: url('../../../image/week2/sparkle.png');
+        }
+        &.photographer {
+            background-image: url('../../../image/week2/photographer.png');
+        }
+        &.people-2 {
+            background-image: url('../../../image/week2/people-2.png');
+            width: 306px;
+        }
     }
     .text {
         width: 526px;
