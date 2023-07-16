@@ -111,9 +111,6 @@ body {
 .mr-24 {
     margin-right: 24px;
 }
-.mr-113 {
-    margin-right: 113px;
-}
 .mr-134 {
     margin-right: 134px;
 }
@@ -144,10 +141,6 @@ header {
         color: $c-white;
         li {
             max-width: 306px;
-            min-width: 196px;
-            &:last-child {
-                text-align: end;
-            }
             &:hover {
                 color: #fff;
             }
@@ -197,6 +190,9 @@ header {
 
 .about {
     align-items: center;
+    h2 {
+        color: #000;
+    }
     ul.trait {
         width: 636px;
         flex-wrap: wrap;
@@ -214,6 +210,9 @@ header {
 
 .contact {
     background: linear-gradient(to bottom, #050014, rgba(#01021E, .89));
+    .container {
+        justify-content: space-between;
+    }
     .text {
         align-items: center;
         img {
@@ -221,12 +220,14 @@ header {
         }
     }
     .icons {
-        margin-left: auto;
+        // margin-left: auto;
+
         a:hover {
             filter: drop-shadow(0 0 10px $hover-effect);
         }
         img {
             width: 162px;
+            margin-left: 20px;
         }
     }
     
@@ -235,6 +236,7 @@ header {
 .projects {
     h2 {
         margin-left: 550px;
+        color: #000;
     }
     button {
         @include button($bg:#000, $color: #fff, $arrow_addr: '../../../image/week2/arrow_outward-white.png');
